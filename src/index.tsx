@@ -3,6 +3,14 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// TODO: add REACT_APP_RM_API_BASE_URL for e2e
+// api mock for local development
+if (process.env.NODE_ENV === 'development') {
+  // eslint-disable-next-line global-require
+  const { worker } = require('./mocks/browser');
+  worker.start();
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>

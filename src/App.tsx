@@ -1,5 +1,11 @@
+import { ClientProvider, CharactersList } from './components';
+
 function App() {
-  return <div>App</div>;
+  return (
+    <ClientProvider>
+      <CharactersList />
+    </ClientProvider>
+  );
 }
 
 export default App;
