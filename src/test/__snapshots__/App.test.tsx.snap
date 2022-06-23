@@ -2,6 +2,33 @@
 
 exports[`App: renders characters cards list 1`] = `
 <div>
+  <form>
+    <label
+      for="email"
+    >
+      Email address
+      <input
+        id="email"
+        required=""
+        type="email"
+      />
+    </label>
+    <label
+      for="password"
+    >
+      Password
+      <input
+        id="password"
+        required=""
+        type="password"
+      />
+    </label>
+    <button
+      type="submit"
+    >
+      Sign in
+    </button>
+  </form>
   <ul>
     <li>
       <article>

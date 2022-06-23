@@ -1,10 +1,15 @@
-import { ClientProvider, CharactersList } from './components';
+import { CacheConfigProvider, CharactersList, AuthProvider, Login } from './components';
 
 function App() {
+  // TODO:
+  // add router and restrict paths
   return (
-    <ClientProvider>
-      <CharactersList />
-    </ClientProvider>
+    <AuthProvider>
+      <Login />
+      <CacheConfigProvider>
+        <CharactersList />
+      </CacheConfigProvider>
+    </AuthProvider>
   );
 }
 

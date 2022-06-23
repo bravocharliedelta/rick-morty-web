@@ -1,5 +1,5 @@
 import useSWR from 'swr';
-import { CHARACTERS_API } from '../../constants/api';
+import { RM_CHARACTERS_PATH } from '../../constants/api';
 
 export type CharacterResponse = {
   id: number;
@@ -37,7 +37,7 @@ type CharactersResponse = {
 };
 
 const useCharacters = () => {
-  const { data } = useSWR<CharactersResponse>(CHARACTERS_API);
+  const { data } = useSWR<CharactersResponse>(RM_CHARACTERS_PATH);
 
   return { characters: data?.results };
 };
