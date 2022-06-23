@@ -1,5 +1,334 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`App: Happy path 1`] = `
+<div>
+  <main>
+    <ul>
+      <li>
+        <article>
+          <img
+            alt="Rick Sanchez"
+            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+          />
+          <h2>
+            Rick Sanchez
+          </h2>
+          <h4>
+            Alive
+          </h4>
+          <mark />
+          <h3>
+            Last known location:
+          </h3>
+          <p>
+            Citadel of Ricks
+          </p>
+          <h3>
+            First seen in:
+          </h3>
+          <p>
+            Earth (C-137)
+          </p>
+        </article>
+        <a
+          href="/character/1"
+        >
+          More info
+        </a>
+      </li>
+      <li>
+        <article>
+          <img
+            alt="Morty Smith"
+            src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+          />
+          <h2>
+            Morty Smith
+          </h2>
+          <h4>
+            Alive
+          </h4>
+          <mark />
+          <h3>
+            Last known location:
+          </h3>
+          <p>
+            Citadel of Ricks
+          </p>
+          <h3>
+            First seen in:
+          </h3>
+          <p>
+            unknown
+          </p>
+        </article>
+        <a
+          href="/character/2"
+        >
+          More info
+        </a>
+      </li>
+      <li>
+        <article>
+          <img
+            alt="Summer Smith"
+            src="https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+          />
+          <h2>
+            Summer Smith
+          </h2>
+          <h4>
+            Alive
+          </h4>
+          <mark />
+          <h3>
+            Last known location:
+          </h3>
+          <p>
+            Earth (Replacement Dimension)
+          </p>
+          <h3>
+            First seen in:
+          </h3>
+          <p>
+            Earth (Replacement Dimension)
+          </p>
+        </article>
+        <a
+          href="/character/3"
+        >
+          More info
+        </a>
+      </li>
+      <li>
+        <article>
+          <img
+            alt="Beth Smith"
+            src="https://rickandmortyapi.com/api/character/avatar/4.jpeg"
+          />
+          <h2>
+            Beth Smith
+          </h2>
+          <h4>
+            Alive
+          </h4>
+          <mark />
+          <h3>
+            Last known location:
+          </h3>
+          <p>
+            Earth (Replacement Dimension)
+          </p>
+          <h3>
+            First seen in:
+          </h3>
+          <p>
+            Earth (Replacement Dimension)
+          </p>
+        </article>
+        <a
+          href="/character/4"
+        >
+          More info
+        </a>
+      </li>
+      <li>
+        <article>
+          <img
+            alt="Jerry Smith"
+            src="https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+          />
+          <h2>
+            Jerry Smith
+          </h2>
+          <h4>
+            Alive
+          </h4>
+          <mark />
+          <h3>
+            Last known location:
+          </h3>
+          <p>
+            Earth (Replacement Dimension)
+          </p>
+          <h3>
+            First seen in:
+          </h3>
+          <p>
+            Earth (Replacement Dimension)
+          </p>
+        </article>
+        <a
+          href="/character/5"
+        >
+          More info
+        </a>
+      </li>
+      <li>
+        <article>
+          <img
+            alt="Abadango Cluster Princess"
+            src="https://rickandmortyapi.com/api/character/avatar/6.jpeg"
+          />
+          <h2>
+            Abadango Cluster Princess
+          </h2>
+          <h4>
+            Alive
+          </h4>
+          <mark />
+          <h3>
+            Last known location:
+          </h3>
+          <p>
+            Abadango
+          </p>
+          <h3>
+            First seen in:
+          </h3>
+          <p>
+            Abadango
+          </p>
+        </article>
+        <a
+          href="/character/6"
+        >
+          More info
+        </a>
+      </li>
+      <li>
+        <article>
+          <img
+            alt="Abradolf Lincler"
+            src="https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+          />
+          <h2>
+            Abradolf Lincler
+          </h2>
+          <h4>
+            unknown
+          </h4>
+          <mark />
+          <h3>
+            Last known location:
+          </h3>
+          <p>
+            Testicle Monster Dimension
+          </p>
+          <h3>
+            First seen in:
+          </h3>
+          <p>
+            Earth (Replacement Dimension)
+          </p>
+        </article>
+        <a
+          href="/character/7"
+        >
+          More info
+        </a>
+      </li>
+      <li>
+        <article>
+          <img
+            alt="Adjudicator Rick"
+            src="https://rickandmortyapi.com/api/character/avatar/8.jpeg"
+          />
+          <h2>
+            Adjudicator Rick
+          </h2>
+          <h4>
+            Dead
+          </h4>
+          <mark />
+          <h3>
+            Last known location:
+          </h3>
+          <p>
+            Citadel of Ricks
+          </p>
+          <h3>
+            First seen in:
+          </h3>
+          <p>
+            unknown
+          </p>
+        </article>
+        <a
+          href="/character/8"
+        >
+          More info
+        </a>
+      </li>
+      <li>
+        <article>
+          <img
+            alt="Agency Director"
+            src="https://rickandmortyapi.com/api/character/avatar/9.jpeg"
+          />
+          <h2>
+            Agency Director
+          </h2>
+          <h4>
+            Dead
+          </h4>
+          <mark />
+          <h3>
+            Last known location:
+          </h3>
+          <p>
+            Earth (Replacement Dimension)
+          </p>
+          <h3>
+            First seen in:
+          </h3>
+          <p>
+            Earth (Replacement Dimension)
+          </p>
+        </article>
+        <a
+          href="/character/9"
+        >
+          More info
+        </a>
+      </li>
+      <li>
+        <article>
+          <img
+            alt="Alan Rails"
+            src="https://rickandmortyapi.com/api/character/avatar/10.jpeg"
+          />
+          <h2>
+            Alan Rails
+          </h2>
+          <h4>
+            Dead
+          </h4>
+          <mark />
+          <h3>
+            Last known location:
+          </h3>
+          <p>
+            Worldender's lair
+          </p>
+          <h3>
+            First seen in:
+          </h3>
+          <p>
+            unknown
+          </p>
+        </article>
+        <a
+          href="/character/10"
+        >
+          More info
+        </a>
+      </li>
+    </ul>
+  </main>
+</div>
+`;
+
 exports[`App: renders characters cards list 1`] = `
 <div>
   <form>

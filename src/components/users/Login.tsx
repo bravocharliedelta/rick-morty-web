@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+import { useAuth } from './AuthProvider';
 import { Credentials, useLogin } from './loginHelpers';
 
-// TODO: move form components to ui library
+// TODO: move the form's components to ui library
 
 function Login() {
-  const { login } = useLogin();
   const [formData, setFormData] = useState<Credentials>({ email: '', password: '' });
+  const { login } = useLogin();
+  const { isAuthenticated } = useAuth();
+  const location = useLocation();
+
+  if (isAuthenticated()) {
+    return <Navigate to="/characters" state={{ from: location }} replace />;
+  }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

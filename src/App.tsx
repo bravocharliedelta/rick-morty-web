@@ -1,13 +1,28 @@
-import { CacheConfigProvider, CharactersList, AuthProvider, Login } from './components';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import {
+  CacheConfigProvider,
+  CharactersList,
+  AuthProvider,
+  Login,
+  Layout,
+  RequireAuth,
+  NotFound,
+} from './components';
 
 function App() {
-  // TODO:
-  // add router and restrict paths
   return (
     <AuthProvider>
-      <Login />
       <CacheConfigProvider>
-        <CharactersList />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="login" element={<Login />} />
+            <Route element={<RequireAuth />}>
+              <Route path="characters" element={<CharactersList />} />
+            </Route>
+            <Route path="" element={<Navigate to="/login" replace />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
       </CacheConfigProvider>
     </AuthProvider>
   );
