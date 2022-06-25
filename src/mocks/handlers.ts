@@ -4,7 +4,6 @@ import { rest } from 'msw';
 import { RM_API_BASE_URL, RM_CHARACTERS_PATH, RM_LOGIN_PATH } from '../constants/api';
 import charactersMock from './charactersMock.json';
 
-// eslint-disable-next-line import/prefer-default-export
 export const handlers = [
   rest.get(RM_API_BASE_URL + RM_CHARACTERS_PATH, (req, res, ctx) => {
     return res(ctx.status(200), ctx.json(charactersMock));

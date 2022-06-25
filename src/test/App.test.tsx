@@ -9,7 +9,7 @@ import App from '../App';
 */
 
 describe('App:', () => {
-  it('Happy path', async () => {
+  it('shows all happy path steps', async () => {
     const { container } = render(
       <BrowserRouter>
         <App />
@@ -17,12 +17,34 @@ describe('App:', () => {
     );
 
     // shows login page at start
-    userEvent.type(screen.getByLabelText(/email address/i), 'rick.sanchez@pickle.org');
-    userEvent.type(screen.getByLabelText(/password/i), 'rick.sanchez@pickle.org');
-    userEvent.click(screen.getByRole('button'));
+    await userEvent.type(screen.getByLabelText(/email address/i), 'rick.sanchez@pickle.org');
+    await userEvent.type(screen.getByText(/password/i), 'ImPickleRick!');
+    await userEvent.click(screen.getByRole('button', { name: /sign in/i }));
 
     // redirects to /character
-    await screen.findAllByAltText(/rick sanchez/i);
+    await screen.findByAltText(/rick sanchez/i);
     expect(container).toMatchSnapshot();
+  });
+
+  it('validates login credentials', async () => {
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    );
+
+    const emailInput = screen.getByLabelText(/email address/i);
+    const passInput = screen.getByLabelText(/password/i);
+
+    // submit empty form
+    await userEvent.click(screen.getByRole('button', { name: /sign in/i }));
+    expect(screen.getAllByText(/field is required/i).length).toBe(2);
+
+    await userEvent.type(emailInput, 'rick.sanchez');
+    expect(screen.getByText(/invalid email/i)).toBeInTheDocument();
+
+    await userEvent.type(emailInput, 'rick.sanchez@pickle.org');
+    await userEvent.type(passInput, 'ImPickleRick!');
+    expect(screen.queryAllByRole('alert').length).toBe(0);
   });
 });
