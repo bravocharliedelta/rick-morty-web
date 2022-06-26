@@ -17,7 +17,7 @@ function App() {
         <StylesProvider>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route path="login" element={<Login />} />
+              <Route path="login" element={<Login navigateTo="/characters" />} />
               <Route element={<RequireAuth />}>
                 <Route path="characters" element={<CharactersList />} />
               </Route>

@@ -12,13 +12,17 @@ const LoginContainer = styled.div`
   padding: 10rem 0 0 0;
 `;
 
-function Login() {
+type LoginProps = {
+  navigateTo: string;
+};
+
+function Login({ navigateTo }: LoginProps) {
   const { login, loading } = useLogin();
   const { isAuthenticated } = useAuth();
   const location = useLocation();
 
   if (isAuthenticated()) {
-    return <Navigate to="/characters" state={{ from: location }} replace />;
+    return <Navigate to={navigateTo} state={{ from: location }} replace />;
   }
 
   const handleSubmit = (credentials: Credentials) => {

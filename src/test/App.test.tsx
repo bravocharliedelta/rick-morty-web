@@ -12,6 +12,12 @@ const login = async ({ email = 'rick.sanchez@pickle.org', password = 'ImPickleRi
   await userEvent.click(screen.getByRole('button', { name: /sign in/i }));
 };
 
+const renderForTest = ({ route = '/' } = {}) => {
+  window.history.pushState({}, 'Test page', route);
+
+  return render(<App />, { wrapper: BrowserRouter });
+};
+
 /* 
   check mock folder to preview default, fetched, mocked data
 */
@@ -25,11 +31,7 @@ describe('App:', () => {
       })
     );
 
-    render(
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    );
+    renderForTest();
 
     await login();
 
@@ -38,11 +40,7 @@ describe('App:', () => {
   });
 
   it('shows all happy path steps', async () => {
-    const { container } = render(
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    );
+    const { container } = renderForTest();
 
     await login();
 
@@ -53,11 +51,7 @@ describe('App:', () => {
   });
 
   it('validates login credentials', async () => {
-    render(
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    );
+    renderForTest();
 
     const emailInput = screen.getByLabelText(/email address/i);
     const passInput = screen.getByLabelText(/password/i);
@@ -72,5 +66,11 @@ describe('App:', () => {
     await userEvent.type(emailInput, 'rick.sanchez@pickle.org');
     await userEvent.type(passInput, 'ImPickleRick!');
     expect(screen.queryAllByRole('alert').length).toBe(0);
+  });
+
+  it('shows 404 page', () => {
+    renderForTest({ route: 'random' });
+
+    expect(screen.getByText('404')).toBeInTheDocument();
   });
 });
