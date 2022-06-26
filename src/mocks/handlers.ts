@@ -5,11 +5,11 @@ import { RM_API_BASE_URL, RM_CHARACTERS_PATH, RM_LOGIN_PATH } from '../constants
 import charactersMock from './charactersMock.json';
 
 export const handlers = [
-  rest.get(RM_API_BASE_URL + RM_CHARACTERS_PATH, (req, res, ctx) => {
+  rest.get(`${RM_API_BASE_URL}${RM_CHARACTERS_PATH}`, (req, res, ctx) => {
     return res(ctx.status(200), ctx.json(charactersMock));
   }),
 
-  rest.post(RM_API_BASE_URL + RM_LOGIN_PATH, (req, res, ctx) => {
+  rest.post(`${RM_API_BASE_URL}${RM_LOGIN_PATH}`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({

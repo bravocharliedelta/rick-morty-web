@@ -37,9 +37,9 @@ type CharactersResponse = {
 };
 
 const useCharacters = () => {
-  const { data } = useSWR<CharactersResponse>(RM_CHARACTERS_PATH);
+  const { data, error, isValidating } = useSWR<CharactersResponse>(RM_CHARACTERS_PATH);
 
-  return { characters: data?.results };
+  return { characters: data?.results, error, loading: isValidating };
 };
 
 export { useCharacters };
