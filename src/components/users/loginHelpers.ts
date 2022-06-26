@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { publicClient } from '../../clients/rickMortyClient';
+import { privateClient } from '../../clients/rickMortyClient';
 import { RM_LOGIN_PATH } from '../../constants/api';
 import { AuthInfo, useAuth } from './AuthProvider';
 
@@ -16,7 +16,7 @@ const useLogin = () => {
     setLoading(true);
 
     try {
-      const { data } = await publicClient.post<AuthInfo>(RM_LOGIN_PATH, credentials);
+      const { data } = await privateClient.post<AuthInfo>(RM_LOGIN_PATH, credentials);
       saveAuthInfo(data);
     } catch (error) {
       // TODO: add error handling
