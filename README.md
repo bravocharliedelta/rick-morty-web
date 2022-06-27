@@ -1,19 +1,21 @@
 # Rick & Morty
 
-App in the development. All http requests are mocked. No real credential required to log in.
+App in the development. All http requests are mocked. No real user's credential required to log in.
 
 ## Features
 
-- sign up page
-- characters list
+- sign in page
+- characters list page
 
 ## Next steps
 
 - error boundary handler
 - improved UX for login errors
-- connect to real microservice
+- connect to a real microservice
 - register a user
 - Single character view page
+- extend cashe policy
+- CSFR protection
 
 ## Dependencies
 
