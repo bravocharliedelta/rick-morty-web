@@ -19,8 +19,7 @@ App in the development. All http requests are mocked. No real user's credential 
 
 ## Dependencies
 
-- [msw](https://mswjs.io/docs/) - API mock for local
-- development and testing
+- [msw](https://mswjs.io/docs/) - API mock for local development and testing
 - [@emotion/react]() CSS in JS,
 - [swr](https://swr.vercel.app/) - manage server state easily
 - [react-hook-form](https://react-hook-form.com/) - helpful for building form in a UI component library, allows to do advanced validation
